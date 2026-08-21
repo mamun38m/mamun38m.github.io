@@ -1,0 +1,30 @@
+{
+  "name": "Abdullah Al Mamun",
+  "title": "Researcher | Bioinformatics | Computational Biology",
+
+  "about": "I am interested in bioinformatics, computational biology and drug discovery.",
+
+  "research_interests": [
+    "Bioinformatics",
+    "Computational Biology",
+    "Drug Discovery",
+    "Artificial Intelligence"
+  ],
+
+  "education": [
+    {
+      "degree": "Bachelor of Pharmacy",
+      "institution": "Your University",
+      "year": "2026"
+    }
+  ],
+
+  "publications": [
+    {
+      "title": "Research Paper 1",
+      "journal": "Journal Name",
+      "year": "2026",
+      "doi": "https://doi.org/example"
+    }
+  ]
+}
