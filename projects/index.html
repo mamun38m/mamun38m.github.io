@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Abdullah Al Mamun | Projects</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <style>
+
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+
+            margin: 0;
+            padding: 0;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           Navigation
+        ========================== */
+
+        .site-header {
+            background: #ffffff;
+
+            border-bottom:
+                1px solid var(--border-color);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        .site-nav {
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding: 16px 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 28px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .site-nav a {
+            color: var(--primary-color);
+
+            text-decoration: none;
+
+            font-weight: 500;
+
+            font-size: 0.95rem;
+
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        .site-nav a:hover {
+            color: var(--accent-color);
+
+            transform:
+                translateY(-1px);
+        }
+
+
+        .site-nav a.active {
+            color: var(--accent-color);
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           Page Header
+        ========================== */
+
+        .page-header {
+            text-align: center;
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+            padding:
+                60px 20px 30px 20px;
+        }
+
+
+        .page-header h1 {
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                clamp(2.3rem, 5vw, 3.5rem);
+
+            color:
+                var(--primary-color);
+
+            margin:
+                0 0 15px 0;
+        }
+
+
+        .page-header p {
+            max-width: 720px;
+
+            margin: 0 auto;
+
+            color: #64748b;
+
+            font-size: 1rem;
+        }
+
+
+        /* =========================
+           Main Container
+        ========================== */
+
+        .container {
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+            padding:
+                20px 20px 70px 20px;
+        }
+
+
+        /* =========================
+           Project Grid
+        ========================== */
+
+        .project-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                25px;
+        }
+
+
+        /* =========================
+           Project Card
+        ========================== */
+
+        .project-card {
+            background:
+                var(--card-bg);
+
+            border-radius:
+                15px;
+
+            padding:
+                30px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0, 0, 0, 0.07);
+
+            border-top:
+                4px solid var(--accent-color);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .project-card:hover {
+            transform:
+                translateY(-6px);
+
+            box-shadow:
+                0 16px 38px
+                rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =========================
+           Project Icon
+        ========================== */
+
+        .project-icon {
+            width:
+                55px;
+
+            height:
+                55px;
+
+            border-radius:
+                12px;
+
+            background:
+                #eaf4fb;
+
+            color:
+                var(--accent-color);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .project-icon i {
+            font-size:
+                1.4rem;
+        }
+
+
+        /* =========================
+           Project Content
+        ========================== */
+
+        .project-card h2 {
+            font-family:
+                'Playfair Display',
+                serif;
+
+            color:
+                var(--primary-color);
+
+            font-size:
+                1.4rem;
+
+            margin:
+                0 0 12px 0;
+        }
+
+
+        .project-card p {
+            color:
+                #555;
+
+            margin:
+                0 0 18px 0;
+        }
+
+
+        /* =========================
+           Project Tags
+        ========================== */
+
+        .project-tags {
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                8px;
+
+            margin-top:
+                15px;
+        }
+
+
+        .project-tag {
+            background:
+                #f1f5f9;
+
+            color:
+                #475569;
+
+            padding:
+                6px 11px;
+
+            border-radius:
+                15px;
+
+            font-size:
+                0.78rem;
+
+            font-weight:
+                500;
+        }
+
+
+        /* =========================
+           Project Button
+        ========================== */
+
+        .project-btn {
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                8px;
+
+            margin-top:
+                20px;
+
+            padding:
+                9px 16px;
+
+            background:
+                var(--accent-color);
+
+            color:
+                #ffffff;
+
+            border-radius:
+                7px;
+
+            text-decoration:
+                none;
+
+            font-size:
+                0.85rem;
+
+            font-weight:
+                600;
+
+            transition:
+                background-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        .project-btn:hover {
+            background:
+                #2471a3;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =========================
+           Current Work Section
+        ========================== */
+
+        .current-work {
+            background:
+                #ffffff;
+
+            border-radius:
+                15px;
+
+            padding:
+                35px;
+
+            margin-top:
+                30px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0, 0, 0, 0.06);
+        }
+
+
+        .current-work h2 {
+            font-family:
+                'Playfair Display',
+                serif;
+
+            color:
+                var(--primary-color);
+
+            margin:
+                0 0 15px 0;
+        }
+
+
+        .current-work p {
+            color:
+                #555;
+
+            margin:
+                0;
+        }
+
+
+        /* =========================
+           Responsive
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            .site-nav {
+                gap:
+                    15px;
+
+                padding:
+                    14px 12px;
+            }
+
+
+            .site-nav a {
+                font-size:
+                    0.9rem;
+            }
+
+
+            .page-header {
+                padding:
+                    45px 15px 20px 15px;
+            }
+
+
+            .container {
+                padding:
+                    15px 15px 50px 15px;
+            }
+
+
+            .project-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .project-card,
+            .current-work {
+                padding:
+                    25px;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .project-card h2 {
+                font-size:
+                    1.25rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         Navigation
+    ========================== -->
+
+    <header class="site-header">
+
+        <nav class="site-nav">
+
+            <a href="../">
+                Home
+            </a>
+
+            <a href="../education/">
+                Education
+            </a>
+
+            <a href="../research/">
+                Research
+            </a>
+
+            <a href="../publications/">
+                Publications
+            </a>
+
+            <a
+                href="../projects/"
+                class="active"
+            >
+                Projects
+            </a>
+
+            <a href="../skills/">
+                Skills
+            </a>
+
+            <a href="../contact/">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         Page Header
+    ========================== -->
+
+    <header class="page-header">
+
+        <h1>
+            Projects
+        </h1>
+
+        <p>
+            A collection of my academic, research,
+            computational, and personal projects.
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         Main Content
+    ========================== -->
+
+    <main class="container">
+
+
+        <!-- =========================
+             Project Grid
+        ========================== -->
+
+        <section class="project-grid">
+
+
+            <!-- Project 1 -->
+
+            <article class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-flask"></i>
+
+                </div>
+
+
+                <h2>
+                    Computational Drug Discovery
+                </h2>
+
+
+                <p>
+                    A computational research project focused on
+                    identifying and evaluating potential drug-like
+                    compounds against biologically relevant
+                    protein targets.
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span class="project-tag">
+                        Molecular Docking
+                    </span>
+
+                    <span class="project-tag">
+                        Drug Discovery
+                    </span>
+
+                    <span class="project-tag">
+                        Protein-Ligand Interaction
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Project 2 -->
+
+            <article class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-dna"></i>
+
+                </div>
+
+
+                <h2>
+                    Bioinformatics Analysis
+                </h2>
+
+
+                <p>
+                    A bioinformatics-oriented project involving
+                    biological data processing, analysis,
+                    visualization, and interpretation.
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span class="project-tag">
+                        Bioinformatics
+                    </span>
+
+                    <span class="project-tag">
+                        Data Analysis
+                    </span>
+
+                    <span class="project-tag">
+                        R
+                    </span>
+
+                    <span class="project-tag">
+                        Python
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Project 3 -->
+
+            <article class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+
+                <h2>
+                    Statistical Data Analysis
+                </h2>
+
+
+                <p>
+                    A data analysis project involving data cleaning,
+                    missing-value handling, statistical analysis,
+                    visualization, and interpretation of research data.
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span class="project-tag">
+                        R
+                    </span>
+
+                    <span class="project-tag">
+                        Statistics
+                    </span>
+
+                    <span class="project-tag">
+                        Data Visualization
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Project 4 -->
+
+            <article class="project-card">
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                </div>
+
+
+                <h2>
+                    Personal Academic Website
+                </h2>
+
+
+                <p>
+                    A personal academic website designed to present
+                    my education, research interests, publications,
+                    projects, skills, and professional information.
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span class="project-tag">
+                        HTML
+                    </span>
+
+                    <span class="project-tag">
+                        CSS
+                    </span>
+
+                    <span class="project-tag">
+                        JavaScript
+                    </span>
+
+                    <span class="project-tag">
+                        GitHub Pages
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="../"
+                    class="project-btn"
+                >
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    Visit Website
+
+                </a>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- =========================
+             Current Work
+        ========================== -->
+
+        <section class="current-work">
+
+            <h2>
+                Current &amp; Future Projects
+            </h2>
+
+            <p>
+                This section will be updated with new research projects,
+                computational studies, data-analysis projects, and other
+                academic work as they develop.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>
